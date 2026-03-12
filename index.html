@@ -5,17 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gaya Generic Aushadhi Kendra</title>
+<title>Gaya Generic Aushadhi Kendra | Affordable Medicines</title>
 
-<meta name="description" content="Affordable Generic Medicines in Gaya Bihar. Quality medicines at lower prices.">
-<meta name="keywords" content="Generic medicines Gaya, cheap medicines Gaya, pharmacy Gaya">
+<meta name="description" content="Best generic medicine store in Gaya Bihar. Affordable medicines near Katari Hill Road. Call or WhatsApp to order medicines.">
+<meta name="keywords" content="generic medicine gaya, pharmacy gaya bihar, cheap medicines gaya">
 <meta name="author" content="Gaya Generic Aushadhi Kendra">
 
-<meta property="og:title" content="Gaya Generic Aushadhi Kendra">
-<meta property="og:description" content="Affordable medicines for everyone in Gaya">
-<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -29,7 +29,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f7fafc;
+background:linear-gradient(135deg,#e8f8f0,#f5f7fb);
 color:#111;
 }
 
@@ -39,9 +39,9 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+padding:18px 25px;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.6);
 position:sticky;
 top:0;
 z-index:1000;
@@ -49,59 +49,18 @@ z-index:1000;
 
 .logo{
 font-weight:700;
-font-size:16px;
-}
-
-.menu-btn{
-font-size:24px;
-cursor:pointer;
-}
-
-/* DRAWER MENU */
-
-.drawer{
-position:fixed;
-top:0;
-right:-260px;
-width:260px;
-height:100%;
-background:white;
-box-shadow:-3px 0 15px rgba(0,0,0,0.1);
-padding:40px 25px;
-transition:0.3s;
-}
-
-.drawer.active{
-right:0;
-}
-
-.drawer a{
-display:block;
-margin-bottom:20px;
-text-decoration:none;
-color:#111;
-font-weight:500;
+font-size:18px;
 }
 
 /* HERO */
 
 .hero{
-padding:60px 25px;
-}
-
-.badge{
-background:#e8f8f0;
-color:#16a34a;
-display:inline-block;
-padding:8px 15px;
-border-radius:20px;
-font-size:13px;
-margin-bottom:20px;
+padding:80px 25px;
+text-align:center;
 }
 
 .hero h1{
-font-size:34px;
-line-height:1.2;
+font-size:36px;
 margin-bottom:15px;
 }
 
@@ -110,28 +69,59 @@ color:#16a34a;
 }
 
 .hero p{
+max-width:500px;
+margin:auto;
 color:#555;
-font-size:15px;
-max-width:340px;
 }
 
-/* SERVICES */
+/* SEARCH BAR */
+
+.search-box{
+margin-top:30px;
+display:flex;
+justify-content:center;
+}
+
+.search-box input{
+width:300px;
+padding:12px;
+border-radius:30px;
+border:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* GLASS CARDS */
 
 .section{
-padding:60px 25px;
+padding:70px 25px;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.services{
+.cards{
+display:grid;
+gap:25px;
+}
+
+.card{
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* REVIEWS */
+
+.reviews{
 display:grid;
 gap:20px;
 }
 
-.card{
+.review{
 background:white;
 padding:20px;
 border-radius:12px;
@@ -147,23 +137,7 @@ border:0;
 border-radius:12px;
 }
 
-/* CONTACT */
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-display:inline-block;
-margin-top:15px;
-padding:12px 22px;
-background:#16a34a;
-color:white;
-border-radius:30px;
-text-decoration:none;
-}
-
-/* FLOAT BUTTONS */
+/* BUTTONS */
 
 .whatsapp{
 position:fixed;
@@ -179,7 +153,6 @@ justify-content:center;
 font-size:26px;
 color:white;
 text-decoration:none;
-box-shadow:0 6px 18px rgba(0,0,0,0.2);
 }
 
 .call-btn{
@@ -200,14 +173,12 @@ text-decoration:none;
 
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:#111;
 color:white;
-font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -218,66 +189,85 @@ font-size:14px;
 Gaya Generic Aushadhi Kendra
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
-
 </header>
-
-<!-- DRAWER -->
-
-<div class="drawer" id="drawer">
-
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#location">Location</a>
-<a href="#contact">Contact</a>
-
-<a href="tel:7488625073">📞 Call Now</a>
-
-<a href="https://wa.me/917488625073">💬 WhatsApp</a>
-
-</div>
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="badge">
-Trusted Medical Store in Gaya
-</div>
-
-<h1>
-Affordable Generic <span>Medicines</span> for Everyone
+<h1 data-aos="fade-up">
+Affordable Generic <span>Medicines</span>
 </h1>
 
-<p>
-Quality medicines at lower prices for families across Gaya.
+<p data-aos="fade-up">
+Best generic medicine shop near Katari Hill Road, Gaya Bihar.
 </p>
+
+<div class="search-box" data-aos="fade-up">
+
+<input type="text" placeholder="Search medicine...">
+
+</div>
+
+<br>
+
+<a href="https://wa.me/917488625073?text=Hello%20I%20want%20to%20order%20medicine"
+style="background:#16a34a;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;">
+
+Order Medicine on WhatsApp
+
+</a>
 
 </section>
 
 <!-- SERVICES -->
 
-<section class="section" id="services">
+<section class="section">
 
-<h2>Our Services</h2>
+<h2 data-aos="fade-up">Our Services</h2>
 
-<div class="services">
+<div class="cards">
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>Low Cost Medicines</h3>
-<p>Affordable government approved generic medicines.</p>
+<p>Affordable government approved medicines.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="zoom-in">
 <h3>Quality Assurance</h3>
-<p>Trusted and certified pharmaceutical products.</p>
+<p>Trusted pharmaceutical products.</p>
 </div>
 
-<div class="card">
-<h3>Customer Support</h3>
-<p>Friendly pharmacy staff to help with medicine queries.</p>
+<div class="card" data-aos="zoom-in">
+<h3>Quick WhatsApp Orders</h3>
+<p>Order medicines directly on WhatsApp.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE REVIEWS -->
+
+<section class="section">
+
+<h2 data-aos="fade-up">Customer Reviews</h2>
+
+<div class="reviews">
+
+<div class="review" data-aos="fade-right">
+⭐⭐⭐⭐⭐  
+Best generic medicine shop in Gaya. Affordable prices.
+</div>
+
+<div class="review" data-aos="fade-right">
+⭐⭐⭐⭐⭐  
+Very helpful staff and genuine medicines.
+</div>
+
+<div class="review" data-aos="fade-right">
+⭐⭐⭐⭐⭐  
+Great pharmacy near Katari Hill Road.
 </div>
 
 </div>
@@ -286,9 +276,9 @@ Quality medicines at lower prices for families across Gaya.
 
 <!-- LOCATION -->
 
-<section class="section" id="location">
+<section class="section">
 
-<h2>Our Location</h2>
+<h2 data-aos="fade-up">Our Location</h2>
 
 <p style="text-align:center;margin-bottom:20px;">
 Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001
@@ -301,33 +291,11 @@ src="https://maps.google.com/maps?q=Katari%20Hill%20Road%20Gaya&t=&z=15&ie=UTF8&
 
 </section>
 
-<!-- CONTACT -->
-
-<section class="section contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<p>Call or WhatsApp us for medicine inquiries</p>
-
-<a href="tel:7488625073">
-📞 Call Now
-</a>
-
-<br><br>
-
-<a href="https://wa.me/917488625073">
-💬 WhatsApp Inquiry
-</a>
-
-</section>
-
 <footer>
 
 © 2026 Gaya Generic Aushadhi Kendra
 
 </footer>
-
-<!-- FLOAT BUTTONS -->
 
 <a href="https://wa.me/917488625073" class="whatsapp">
 💬
@@ -337,12 +305,10 @@ src="https://maps.google.com/maps?q=Katari%20Hill%20Road%20Gaya&t=&z=15&ie=UTF8&
 📞 Call Now
 </a>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
-
-function toggleMenu(){
-document.getElementById("drawer").classList.toggle("active");
-}
-
+AOS.init();
 </script>
 
 </body>
