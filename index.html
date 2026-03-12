@@ -57,6 +57,7 @@ font-size:24px;
 cursor:pointer
 }
 
+/* FIXED DRAWER */
 .drawer{
 position:fixed;
 top:0;
@@ -66,7 +67,8 @@ height:100%;
 background:#fff;
 padding:40px 25px;
 transition:.3s;
-box-shadow:-3px 0 20px rgba(0,0,0,.1)
+box-shadow:-3px 0 20px rgba(0,0,0,.1);
+z-index:2000;
 }
 
 .drawer.active{
@@ -216,10 +218,56 @@ font-size:26px;
 text-decoration:none
 }
 
+/* LOADING ANIMATION */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:5000
+}
+
+.cross{
+width:70px;
+height:70px;
+background:#16a34a;
+border-radius:10px;
+position:relative;
+animation:pulse 1.2s infinite
+}
+
+.cross:before{
+content:"";
+position:absolute;
+width:70px;
+height:70px;
+background:#16a34a;
+border-radius:10px;
+transform:rotate(90deg)
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.2)}
+100%{transform:scale(1)}
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- LOADER -->
+
+<div id="loader">
+<div class="cross"></div>
+</div>
 
 <header>
 
@@ -235,7 +283,6 @@ text-decoration:none
 
 </header>
 
-
 <div class="drawer" id="drawer">
 
 <a href="#home">Home</a>
@@ -247,7 +294,6 @@ text-decoration:none
 <a href="https://wa.me/917488625073">WhatsApp</a>
 
 </div>
-
 
 <section class="hero" id="home" data-aos="fade-up">
 
@@ -271,8 +317,7 @@ Get Directions
 
 </section>
 
-
-<section class="section" id="about" data-aos="fade-up">
+<section class="section" id="about" data-aos="fade-right">
 
 <h2>About Gaya Generic Aushadhi Kendra</h2>
 
@@ -285,16 +330,15 @@ We provide high-quality medicines at affordable prices so every family can acces
 
 <div class="cards" style="margin-top:20px">
 
-<div class="stat">10+<br>Years Experience</div>
-<div class="stat">5000+<br>Happy Families</div>
-<div class="stat">100%<br>Quality Assured</div>
+<div class="stat" data-aos="zoom-in">10+<br>Years Experience</div>
+<div class="stat" data-aos="zoom-in">5000+<br>Happy Families</div>
+<div class="stat" data-aos="zoom-in">100%<br>Quality Assured</div>
 
 </div>
 
 </section>
 
-
-<section class="section" id="services" data-aos="fade-up">
+<section class="section" id="services" data-aos="fade-left">
 
 <h2>Healthcare Solutions for Everyone</h2>
 
@@ -334,7 +378,6 @@ We provide high-quality medicines at affordable prices so every family can acces
 
 </section>
 
-
 <section class="section" id="contact" data-aos="fade-up">
 
 <h2>Visit or Contact Us Today</h2>
@@ -359,26 +402,6 @@ src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&o
 
 </section>
 
-
-<section class="section">
-
-<h2>Order Medicine</h2>
-
-<form onsubmit="sendOrder();return false;">
-
-<input id="name" placeholder="Your Name" required style="padding:10px;width:100%;margin:5px 0">
-
-<input id="med" placeholder="Medicine Name" required style="padding:10px;width:100%;margin:5px 0">
-
-<input id="qty" placeholder="Quantity" required style="padding:10px;width:100%;margin:5px 0">
-
-<button class="btn call">Order on WhatsApp</button>
-
-</form>
-
-</section>
-
-
 <footer class="footer">
 
 <h3>Gaya Generic Aushadhi Kendra</h3>
@@ -391,11 +414,8 @@ src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&o
 
 </footer>
 
-
 <a href="https://wa.me/917488625073" class="float-whatsapp">💬</a>
-
 <a href="tel:7488625073" class="float-call">📞</a>
-
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -403,7 +423,7 @@ src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&o
 
 AOS.init({
 duration:1000,
-once:true
+once:false
 })
 
 function toggleMenu(){
@@ -421,17 +441,9 @@ drawer.classList.remove("active")
 
 })
 
-function sendOrder(){
-
-let n=document.getElementById("name").value
-let m=document.getElementById("med").value
-let q=document.getElementById("qty").value
-
-let msg=`Hello, my name is ${n}. I want ${q} of ${m}.`
-
-window.open(`https://wa.me/917488625073?text=${encodeURIComponent(msg)}`)
-
-}
+window.addEventListener("load",function(){
+document.getElementById("loader").style.display="none"
+})
 
 </script>
 
