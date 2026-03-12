@@ -3,15 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gaya Generic Aushadhi Kendra</title>
 
-<meta name="description" content="Affordable generic medicines in Gaya, Bihar. Trusted local pharmacy near Sechai Vibhag Gate.">
-
-<link rel="icon" href="favicon.ico">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,243 +13,273 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#e7f7ee,#f5f7fb);
-color:#1f2937
+background:#f5f7f6;
+color:#111;
 }
 
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+/* NAVBAR */
+
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#fff;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+padding:15px 0;
 position:sticky;
 top:0;
-z-index:1000
+z-index:100;
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-font-weight:700
+font-weight:600;
+font-size:18px;
 }
 
-.logo img{
-width:36px;
-height:36px;
-border-radius:10px
+.logo-icon{
+background:#17a45b;
+color:white;
+padding:10px;
+border-radius:12px;
 }
 
-.menu-btn{
-font-size:24px;
-cursor:pointer
-}
-
-/* FIXED DRAWER */
-.drawer{
-position:fixed;
-top:0;
-right:-260px;
-width:260px;
-height:100%;
-background:#fff;
-padding:40px 25px;
-transition:.3s;
-box-shadow:-3px 0 20px rgba(0,0,0,.1);
-z-index:2000;
-}
-
-.drawer.active{
-right:0
-}
-
-.drawer a{
-display:block;
-margin-bottom:18px;
-text-decoration:none;
-color:#111;
-font-weight:500
-}
+/* HERO */
 
 .hero{
-padding:70px 25px
-}
-
-.badge{
-background:#e6f7ee;
-color:#16a34a;
-padding:8px 18px;
-border-radius:20px;
-display:inline-block;
-margin-bottom:20px;
-font-size:14px
+background:linear-gradient(135deg,#e9f8ef,#c7f1d9);
+padding:80px 0;
 }
 
 .hero h1{
-font-size:36px;
+font-size:40px;
+font-weight:700;
 line-height:1.2;
-margin-bottom:15px
 }
 
-.hero span{
-color:#16a34a
+.hero h1 span{
+color:#17a45b;
 }
 
 .hero p{
+margin-top:15px;
 color:#555;
-margin-bottom:25px;
-max-width:420px
+font-size:16px;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:block;
-text-align:center;
-padding:14px;
-border-radius:12px;
-margin-bottom:15px;
-font-weight:600;
-text-decoration:none
+padding:14px 25px;
+border-radius:10px;
+font-weight:500;
+text-decoration:none;
 }
 
-.btn.call{
-background:#16a34a;
-color:#fff
+.btn-call{
+background:#17a45b;
+color:white;
 }
 
-.btn.dir{
-border:2px solid #16a34a;
-color:#16a34a
+.btn-outline{
+border:2px solid #17a45b;
+color:#17a45b;
 }
+
+/* FEATURES */
 
 .features{
-margin-top:20px
+display:flex;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
 }
 
-.features li{
-list-style:none;
-margin:10px 0;
-color:#374151
+.feature{
+background:white;
+padding:15px 20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+font-size:14px;
 }
 
-.section{
-padding:70px 25px
-}
+/* ABOUT */
 
-.section h2{
+.about{
+padding:80px 0;
 text-align:center;
-margin-bottom:30px
 }
 
-.cards{
-display:grid;
-gap:20px
+.about-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.07);
+margin-top:30px;
 }
 
-.card{
-background:#fff;
-border-radius:16px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08)
+.stats{
+display:flex;
+justify-content:space-around;
+margin-top:30px;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .stat{
-background:#16a34a;
-color:#fff;
+background:#17a45b;
+color:white;
 padding:20px;
 border-radius:12px;
-text-align:center
+width:120px;
 }
 
-.map{
-width:100%;
-height:300px;
-border-radius:12px;
-border:0
+/* SERVICES */
+
+.services{
+padding:80px 0;
+background:#f8faf9;
+text-align:center;
 }
 
-.footer{
-background:linear-gradient(135deg,#0f172a,#065f46);
-color:#fff;
-padding:40px 25px;
-margin-top:40px
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-.float-whatsapp{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#25D366;
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:26px;
-text-decoration:none
+.service{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+text-align:left;
 }
 
-.float-call{
+/* WHY */
+
+.why{
+padding:80px 0;
+text-align:center;
+}
+
+.why-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+text-align:left;
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 0;
+background:#f8faf9;
+text-align:center;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.contact-card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+text-align:left;
+}
+
+/* CTA */
+
+.cta{
+background:#17a45b;
+color:white;
+padding:80px 0;
+text-align:center;
+}
+
+.cta .btn{
+background:white;
+color:#17a45b;
+}
+
+/* FOOTER */
+
+footer{
+background:#0f2f2a;
+color:white;
+padding:50px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.footer-grid ul{
+list-style:none;
+margin-top:10px;
+}
+
+.footer-grid li{
+margin-bottom:8px;
+color:#ccc;
+}
+
+.copy{
+text-align:center;
+margin-top:30px;
+color:#aaa;
+font-size:14px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#16a34a;
-width:55px;
-height:55px;
+background:#17a45b;
+color:white;
+padding:15px 18px;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:26px;
-text-decoration:none
-}
-
-/* LOADING ANIMATION */
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:5000
-}
-
-.cross{
-width:70px;
-height:70px;
-background:#16a34a;
-border-radius:10px;
-position:relative;
-animation:pulse 1.2s infinite
-}
-
-.cross:before{
-content:"";
-position:absolute;
-width:70px;
-height:70px;
-background:#16a34a;
-border-radius:10px;
-transform:rotate(90deg)
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.2)}
-100%{transform:scale(1)}
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -263,189 +287,252 @@ transform:rotate(90deg)
 
 <body>
 
-<!-- LOADER -->
-
-<div id="loader">
-<div class="cross"></div>
-</div>
-
 <header>
+<div class="container nav">
 
 <div class="logo">
-<img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
+<div class="logo-icon">👥</div>
 <div>
-<div>Gaya Generic</div>
-<small style="color:#16a34a">Aushadhi Kendra</small>
+Gaya Generic <br>
+<small>Aushadhi Kendra</small>
 </div>
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
+</div>
 </header>
 
-<div class="drawer" id="drawer">
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-
-<a href="tel:7488625073">Call Now</a>
-<a href="https://wa.me/917488625073">WhatsApp</a>
-
-</div>
-
-<section class="hero" id="home" data-aos="fade-up">
-
-<div class="badge">Trusted Since Years in Gaya</div>
+<section class="hero">
+<div class="container">
 
 <h1>Affordable Generic <span>Medicines</span> for Everyone</h1>
 
-<p>Quality medicines at lower prices – trusted by families in Gaya</p>
+<p>Quality medicines at lower prices – trusted by families in Gaya.</p>
 
-<a href="tel:7488625073" class="btn call">Call Now</a>
+<div class="buttons">
 
-<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya" class="btn dir">
-Get Directions
-</a>
+<a href="tel:07488625073" class="btn btn-call">Call Now</a>
 
-<ul class="features">
-<li>✔ 100% Genuine</li>
-<li>✔ Up to 80% Off</li>
-<li>✔ Licensed Pharmacy</li>
-</ul>
+<a href="https://maps.google.com" class="btn btn-outline">Get Directions</a>
 
+</div>
+
+<div class="features">
+
+<div class="feature">✔ 100% Genuine</div>
+<div class="feature">💰 Up to 80% Off</div>
+<div class="feature">🏥 Licensed Pharmacy</div>
+
+</div>
+
+</div>
 </section>
 
-<section class="section" id="about" data-aos="fade-right">
+
+<section class="about">
+
+<div class="container">
 
 <h2>About Gaya Generic Aushadhi Kendra</h2>
 
-<div class="card">
+<div class="about-card">
+
 <p>
-Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
-We provide high-quality medicines at affordable prices so every family can access proper healthcare without financial burden.
+Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar. We provide high-quality medicines at affordable prices so every family can access proper healthcare.
 </p>
+
+<div class="stats">
+
+<div class="stat">
+<h3>10+</h3>
+<p>Years</p>
 </div>
 
-<div class="cards" style="margin-top:20px">
+<div class="stat">
+<h3>5000+</h3>
+<p>Families</p>
+</div>
 
-<div class="stat" data-aos="zoom-in">10+<br>Years Experience</div>
-<div class="stat" data-aos="zoom-in">5000+<br>Happy Families</div>
-<div class="stat" data-aos="zoom-in">100%<br>Quality Assured</div>
+<div class="stat">
+<h3>100%</h3>
+<p>Quality</p>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="services" data-aos="fade-left">
+
+<section class="services">
+
+<div class="container">
 
 <h2>Healthcare Solutions for Everyone</h2>
 
-<div class="cards">
+<div class="service-grid">
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>Generic Medicines</h3>
-<p>Wide range of affordable generic medicines with same quality.</p>
+<p>Affordable alternatives to branded medicines.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>Affordable Pricing</h3>
 <p>Save up to 80% on medicine costs.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>Prescription Support</h3>
-<p>Guidance in understanding prescriptions.</p>
+<p>Expert help understanding prescriptions.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>OTC Medicines</h3>
-<p>Complete range for common health needs.</p>
+<p>Complete range of over-the-counter medicines.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>Health & Wellness</h3>
-<p>Vitamins and supplements.</p>
+<p>Vitamins and supplements available.</p>
 </div>
 
-<div class="card" data-aos="zoom-in">
+<div class="service">
 <h3>Friendly Guidance</h3>
 <p>Professional pharmacists ready to help.</p>
 </div>
 
 </div>
 
+</div>
+
 </section>
 
-<section class="section" id="contact" data-aos="fade-up">
+
+<section class="why">
+
+<div class="container">
+
+<h2>Why Families Trust Us</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>Low-cost Genuine Medicines</h3>
+<p>Save up to 80% without compromising quality.</p>
+</div>
+
+<div class="why-card">
+<h3>Trusted Local Pharmacy</h3>
+<p>Serving families across Gaya for years.</p>
+</div>
+
+<div class="why-card">
+<h3>Easy to Locate</h3>
+<p>Near Sechai Vibhag Gate, Ashok Nagar.</p>
+</div>
+
+<div class="why-card">
+<h3>Customer-First Approach</h3>
+<p>Your health and satisfaction come first.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<div class="container">
 
 <h2>Visit or Contact Us Today</h2>
 
-<div class="card">
+<div class="contact-grid">
+
+<div class="contact-card">
 <h3>Call Us</h3>
 <p>074886 25073</p>
-<a href="tel:7488625073">Call Now</a>
 </div>
 
-<div class="card">
+<div class="contact-card">
 <h3>Visit Us</h3>
 <p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya</p>
-<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya">Get Directions</a>
 </div>
 
-<br>
+<div class="contact-card">
+<h3>Business Hours</h3>
+<p>Mon-Sat 8AM - 9PM</p>
+</div>
 
-<iframe class="map"
-src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed">
-</iframe>
+</div>
+
+</div>
 
 </section>
 
-<footer class="footer">
 
+<section class="cta">
+
+<div class="container">
+
+<h2>Need Medicines at Affordable Prices?</h2>
+
+<p>Call us now or visit our store.</p>
+
+<br>
+
+<a href="tel:07488625073" class="btn">Call Now</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
 <h3>Gaya Generic Aushadhi Kendra</h3>
-
 <p>Your trusted pharmacy in Gaya.</p>
+</div>
 
-<p>📞 074886 25073</p>
+<div>
+<h3>Quick Links</h3>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Services</li>
+<li>Contact</li>
+</ul>
+</div>
 
-<p>📍 Katari Hill Rd, Ashok Nagar, Gaya</p>
+<div>
+<h3>Our Services</h3>
+<ul>
+<li>Generic Medicines</li>
+<li>Prescription Support</li>
+<li>OTC Medicines</li>
+<li>Health & Wellness</li>
+</ul>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Gaya Generic Aushadhi Kendra
+</div>
 
 </footer>
 
-<a href="https://wa.me/917488625073" class="float-whatsapp">💬</a>
-<a href="tel:7488625073" class="float-call">📞</a>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-
-AOS.init({
-duration:1000,
-once:false
-})
-
-function toggleMenu(){
-document.getElementById("drawer").classList.toggle("active")
-}
-
-document.addEventListener("click",function(e){
-
-let drawer=document.getElementById("drawer")
-let button=document.querySelector(".menu-btn")
-
-if(!drawer.contains(e.target) && !button.contains(e.target)){
-drawer.classList.remove("active")
-}
-
-})
-
-window.addEventListener("load",function(){
-document.getElementById("loader").style.display="none"
-})
-
-</script>
+<a class="whatsapp" href="https://wa.me/917488625073">💬</a>
 
 </body>
 </html>
