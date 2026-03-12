@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,54 +15,17 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif
+}
 
 body{
 background:linear-gradient(135deg,#e7f7ee,#f5f7fb);
 color:#1f2937
 }
-
-/* LOADER */
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999
-}
-
-.loader-cross{
-width:80px;
-height:80px;
-background:#16a34a;
-border-radius:15px;
-position:relative;
-animation:pulse 1.5s infinite
-}
-
-.loader-cross:before{
-content:"";
-position:absolute;
-background:#16a34a;
-width:80px;
-height:80px;
-border-radius:15px;
-transform:rotate(90deg)
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.2)}
-100%{transform:scale(1)}
-}
-
-/* HEADER */
 
 header{
 display:flex;
@@ -95,8 +57,6 @@ font-size:24px;
 cursor:pointer
 }
 
-/* MENU */
-
 .drawer{
 position:fixed;
 top:0;
@@ -109,7 +69,9 @@ transition:.3s;
 box-shadow:-3px 0 20px rgba(0,0,0,.1)
 }
 
-.drawer.active{right:0}
+.drawer.active{
+right:0
+}
 
 .drawer a{
 display:block;
@@ -119,9 +81,9 @@ color:#111;
 font-weight:500
 }
 
-/* HERO */
-
-.hero{padding:70px 25px}
+.hero{
+padding:70px 25px
+}
 
 .badge{
 background:#e6f7ee;
@@ -139,7 +101,9 @@ line-height:1.2;
 margin-bottom:15px
 }
 
-.hero span{color:#16a34a}
+.hero span{
+color:#16a34a
+}
 
 .hero p{
 color:#555;
@@ -167,7 +131,9 @@ border:2px solid #16a34a;
 color:#16a34a
 }
 
-.features{margin-top:20px}
+.features{
+margin-top:20px
+}
 
 .features li{
 list-style:none;
@@ -175,9 +141,9 @@ margin:10px 0;
 color:#374151
 }
 
-/* SECTIONS */
-
-.section{padding:70px 25px}
+.section{
+padding:70px 25px
+}
 
 .section h2{
 text-align:center;
@@ -204,8 +170,6 @@ border-radius:12px;
 text-align:center
 }
 
-/* MAP */
-
 .map{
 width:100%;
 height:300px;
@@ -213,16 +177,12 @@ border-radius:12px;
 border:0
 }
 
-/* FOOTER */
-
 .footer{
 background:linear-gradient(135deg,#0f172a,#065f46);
 color:#fff;
 padding:40px 25px;
 margin-top:40px
 }
-
-/* FLOAT BUTTONS */
 
 .float-whatsapp{
 position:fixed;
@@ -260,10 +220,6 @@ text-decoration:none
 </head>
 
 <body>
-
-<div id="loader">
-<div class="loader-cross"></div>
-</div>
 
 <header>
 
@@ -303,7 +259,9 @@ text-decoration:none
 
 <a href="tel:7488625073" class="btn call">Call Now</a>
 
-<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya" class="btn dir">Get Directions</a>
+<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya" class="btn dir">
+Get Directions
+</a>
 
 <ul class="features">
 <li>✔ 100% Genuine</li>
@@ -320,40 +278,103 @@ text-decoration:none
 
 <div class="card">
 <p>
-Gaya Generic Aushadhi Kendra provides affordable and genuine medicines for families in Gaya.
+Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
+We provide high-quality medicines at affordable prices so every family can access proper healthcare without financial burden.
 </p>
+</div>
+
+<div class="cards" style="margin-top:20px">
+
+<div class="stat">10+<br>Years Experience</div>
+<div class="stat">5000+<br>Happy Families</div>
+<div class="stat">100%<br>Quality Assured</div>
+
 </div>
 
 </section>
 
 
-<section class="section" data-aos="fade-up">
+<section class="section" id="services" data-aos="fade-up">
 
-<h2>Customer Reviews</h2>
+<h2>Healthcare Solutions for Everyone</h2>
 
 <div class="cards">
 
-<div class="card">
-⭐⭐⭐⭐⭐
-<p>Very affordable medicines and friendly staff.</p>
-<b>- Rajesh Kumar</b>
+<div class="card" data-aos="zoom-in">
+<h3>Generic Medicines</h3>
+<p>Wide range of affordable generic medicines with same quality.</p>
 </div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Affordable Pricing</h3>
+<p>Save up to 80% on medicine costs.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Prescription Support</h3>
+<p>Guidance in understanding prescriptions.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>OTC Medicines</h3>
+<p>Complete range for common health needs.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Health & Wellness</h3>
+<p>Vitamins and supplements.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<h3>Friendly Guidance</h3>
+<p>Professional pharmacists ready to help.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="contact" data-aos="fade-up">
+
+<h2>Visit or Contact Us Today</h2>
 
 <div class="card">
-⭐⭐⭐⭐⭐
-<p>Best generic medicine store in Gaya.</p>
-<b>- Pooja Singh</b>
+<h3>Call Us</h3>
+<p>074886 25073</p>
+<a href="tel:7488625073">Call Now</a>
 </div>
 
 <div class="card">
-⭐⭐⭐⭐⭐
-<p>Good service and genuine medicines.</p>
-<b>- Amit Sharma</b>
+<h3>Visit Us</h3>
+<p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya</p>
+<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya">Get Directions</a>
 </div>
 
-</div>
+<br>
 
-<a class="btn dir" href="https://www.google.com/maps">See Reviews on Google</a>
+<iframe class="map"
+src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+
+<section class="section">
+
+<h2>Order Medicine</h2>
+
+<form onsubmit="sendOrder();return false;">
+
+<input id="name" placeholder="Your Name" required style="padding:10px;width:100%;margin:5px 0">
+
+<input id="med" placeholder="Medicine Name" required style="padding:10px;width:100%;margin:5px 0">
+
+<input id="qty" placeholder="Quantity" required style="padding:10px;width:100%;margin:5px 0">
+
+<button class="btn call">Order on WhatsApp</button>
+
+</form>
 
 </section>
 
@@ -372,6 +393,7 @@ Gaya Generic Aushadhi Kendra provides affordable and genuine medicines for famil
 
 
 <a href="https://wa.me/917488625073" class="float-whatsapp">💬</a>
+
 <a href="tel:7488625073" class="float-call">📞</a>
 
 
@@ -379,10 +401,9 @@ Gaya Generic Aushadhi Kendra provides affordable and genuine medicines for famil
 
 <script>
 
-AOS.init({duration:1000,once:true})
-
-window.addEventListener("load",function(){
-document.getElementById("loader").style.display="none"
+AOS.init({
+duration:1000,
+once:true
 })
 
 function toggleMenu(){
@@ -394,11 +415,23 @@ document.addEventListener("click",function(e){
 let drawer=document.getElementById("drawer")
 let button=document.querySelector(".menu-btn")
 
-if(!drawer.contains(e.target)&&!button.contains(e.target)){
+if(!drawer.contains(e.target) && !button.contains(e.target)){
 drawer.classList.remove("active")
 }
 
 })
+
+function sendOrder(){
+
+let n=document.getElementById("name").value
+let m=document.getElementById("med").value
+let q=document.getElementById("qty").value
+
+let msg=`Hello, my name is ${n}. I want ${q} of ${m}.`
+
+window.open(`https://wa.me/917488625073?text=${encodeURIComponent(msg)}`)
+
+}
 
 </script>
 
