@@ -1,111 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Gaya Generic Aushadhi Kendra</title>
 
 <meta name="description" content="Affordable generic medicines in Gaya, Bihar. Trusted local pharmacy near Sechai Vibhag Gate.">
+
 <link rel="icon" href="favicon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:linear-gradient(135deg,#e7f7ee,#f5f7fb);color:#1f2937}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif
+}
+
+body{
+background:linear-gradient(135deg,#e7f7ee,#f5f7fb);
+color:#1f2937
+}
 
 header{
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 20px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);
-position:sticky;top:0;z-index:1000
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000
 }
 
-.logo{display:flex;align-items:center;gap:10px;font-weight:700}
-.logo img{width:36px;height:36px;border-radius:10px}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700
+}
 
-.menu-btn{font-size:24px;cursor:pointer}
+.logo img{
+width:36px;
+height:36px;
+border-radius:10px
+}
+
+.menu-btn{
+font-size:24px;
+cursor:pointer
+}
 
 .drawer{
-position:fixed;top:0;right:-260px;width:260px;height:100%;
-background:#fff;padding:40px 25px;transition:.3s;box-shadow:-3px 0 20px rgba(0,0,0,.1)
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100%;
+background:#fff;
+padding:40px 25px;
+transition:.3s;
+box-shadow:-3px 0 20px rgba(0,0,0,.1)
 }
-.drawer.active{right:0}
-.drawer a{display:block;margin-bottom:18px;text-decoration:none;color:#111;font-weight:500}
 
-.hero{padding:70px 25px}
-.badge{
-background:#e6f7ee;color:#16a34a;padding:8px 18px;border-radius:20px;
-display:inline-block;margin-bottom:20px;font-size:14px
+.drawer.active{
+right:0
 }
-.hero h1{font-size:36px;line-height:1.2;margin-bottom:15px}
-.hero span{color:#16a34a}
-.hero p{color:#555;margin-bottom:25px;max-width:420px}
+
+.drawer a{
+display:block;
+margin-bottom:18px;
+text-decoration:none;
+color:#111;
+font-weight:500
+}
+
+.hero{
+padding:70px 25px
+}
+
+.badge{
+background:#e6f7ee;
+color:#16a34a;
+padding:8px 18px;
+border-radius:20px;
+display:inline-block;
+margin-bottom:20px;
+font-size:14px
+}
+
+.hero h1{
+font-size:36px;
+line-height:1.2;
+margin-bottom:15px
+}
+
+.hero span{
+color:#16a34a
+}
+
+.hero p{
+color:#555;
+margin-bottom:25px;
+max-width:420px
+}
 
 .btn{
-display:block;text-align:center;padding:14px;border-radius:12px;
-margin-bottom:15px;font-weight:600;text-decoration:none
+display:block;
+text-align:center;
+padding:14px;
+border-radius:12px;
+margin-bottom:15px;
+font-weight:600;
+text-decoration:none
 }
-.btn.call{background:#16a34a;color:#fff}
-.btn.dir{border:2px solid #16a34a;color:#16a34a}
 
-.features{margin-top:20px}
-.features li{list-style:none;margin:10px 0;color:#374151}
+.btn.call{
+background:#16a34a;
+color:#fff
+}
 
-.section{padding:70px 25px}
-.section h2{text-align:center;margin-bottom:30px}
+.btn.dir{
+border:2px solid #16a34a;
+color:#16a34a
+}
 
-.cards{display:grid;gap:20px}
+.features{
+margin-top:20px
+}
+
+.features li{
+list-style:none;
+margin:10px 0;
+color:#374151
+}
+
+.section{
+padding:70px 25px
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px
+}
+
+.cards{
+display:grid;
+gap:20px
+}
+
 .card{
-background:#fff;border-radius:16px;padding:25px;
+background:#fff;
+border-radius:16px;
+padding:25px;
 box-shadow:0 10px 25px rgba(0,0,0,.08)
 }
 
-.stat{background:#16a34a;color:#fff;padding:20px;border-radius:12px;text-align:center}
+.stat{
+background:#16a34a;
+color:#fff;
+padding:20px;
+border-radius:12px;
+text-align:center
+}
 
-.map{width:100%;height:300px;border-radius:12px;border:0}
+.map{
+width:100%;
+height:300px;
+border-radius:12px;
+border:0
+}
 
 .footer{
 background:linear-gradient(135deg,#0f172a,#065f46);
-color:#fff;padding:40px 25px;margin-top:40px
+color:#fff;
+padding:40px 25px;
+margin-top:40px
 }
 
-.footer h3{margin-bottom:10px}
-
 .float-whatsapp{
-position:fixed;bottom:90px;right:20px;background:#25D366;
-width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
-justify-content:center;color:#fff;font-size:26px;text-decoration:none
+position:fixed;
+bottom:90px;
+right:20px;
+background:#25D366;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:26px;
+text-decoration:none
 }
 
 .float-call{
-position:fixed;bottom:20px;right:20px;background:#16a34a;
-width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
-justify-content:center;color:#fff;font-size:26px;text-decoration:none
+position:fixed;
+bottom:20px;
+right:20px;
+background:#16a34a;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:26px;
+text-decoration:none
 }
 
-.chatbot{
-position:fixed;bottom:20px;left:20px;background:#fff;
-width:300px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.2);
-display:none;flex-direction:column
-}
-.chatbot-header{background:#16a34a;color:#fff;padding:10px;border-radius:12px 12px 0 0}
-.chatbot-body{padding:10px;height:200px;overflow:auto;font-size:14px}
-.chatbot-input{display:flex}
-.chatbot-input input{flex:1;padding:8px;border:none;border-top:1px solid #ddd}
-.chatbot-input button{background:#16a34a;color:#fff;border:none;padding:8px}
-
-.chat-toggle{
-position:fixed;bottom:90px;left:20px;background:#16a34a;
-width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
-justify-content:center;color:#fff;font-size:24px;cursor:pointer
-}
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">
 <img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
 <div>
@@ -113,19 +230,26 @@ justify-content:center;color:#fff;font-size:24px;cursor:pointer
 <small style="color:#16a34a">Aushadhi Kendra</small>
 </div>
 </div>
+
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
 </header>
 
+
 <div class="drawer" id="drawer">
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+
 <a href="tel:7488625073">Call Now</a>
 <a href="https://wa.me/917488625073">WhatsApp</a>
+
 </div>
 
-<section class="hero" id="home">
+
+<section class="hero" id="home" data-aos="fade-up">
 
 <div class="badge">Trusted Since Years in Gaya</div>
 
@@ -147,51 +271,72 @@ Get Directions
 
 </section>
 
-<section class="section" id="about">
+
+<section class="section" id="about" data-aos="fade-up">
+
 <h2>About Gaya Generic Aushadhi Kendra</h2>
 
 <div class="card">
 <p>
 Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
-We provide high-quality medicines at affordable prices so every family can access
-proper healthcare without financial burden.
+We provide high-quality medicines at affordable prices so every family can access proper healthcare without financial burden.
 </p>
 </div>
 
 <div class="cards" style="margin-top:20px">
+
 <div class="stat">10+<br>Years Experience</div>
 <div class="stat">5000+<br>Happy Families</div>
 <div class="stat">100%<br>Quality Assured</div>
+
 </div>
+
 </section>
 
-<section class="section" id="services">
+
+<section class="section" id="services" data-aos="fade-up">
+
 <h2>Healthcare Solutions for Everyone</h2>
 
 <div class="cards">
 
-<div class="card"><h3>Generic Medicines</h3>
-<p>Wide range of affordable generic medicines with same quality.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>Generic Medicines</h3>
+<p>Wide range of affordable generic medicines with same quality.</p>
+</div>
 
-<div class="card"><h3>Affordable Pricing</h3>
-<p>Save up to 80% on medicine costs.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>Affordable Pricing</h3>
+<p>Save up to 80% on medicine costs.</p>
+</div>
 
-<div class="card"><h3>Prescription Support</h3>
-<p>Guidance in understanding prescriptions.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>Prescription Support</h3>
+<p>Guidance in understanding prescriptions.</p>
+</div>
 
-<div class="card"><h3>OTC Medicines</h3>
-<p>Complete range for common health needs.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>OTC Medicines</h3>
+<p>Complete range for common health needs.</p>
+</div>
 
-<div class="card"><h3>Health & Wellness</h3>
-<p>Vitamins and supplements.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>Health & Wellness</h3>
+<p>Vitamins and supplements.</p>
+</div>
 
-<div class="card"><h3>Friendly Guidance</h3>
-<p>Professional pharmacists ready to help.</p></div>
+<div class="card" data-aos="zoom-in">
+<h3>Friendly Guidance</h3>
+<p>Professional pharmacists ready to help.</p>
+</div>
 
 </div>
+
 </section>
 
-<section class="section" id="contact">
+
+<section class="section" id="contact" data-aos="fade-up">
+
 <h2>Visit or Contact Us Today</h2>
 
 <div class="card">
@@ -202,82 +347,92 @@ proper healthcare without financial burden.
 
 <div class="card">
 <h3>Visit Us</h3>
-<p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001</p>
+<p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya</p>
 <a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya">Get Directions</a>
-</div>
-
-<div class="card">
-<h3>Business Hours</h3>
-<p>Mon-Sat: 8 AM – 9 PM<br>Sunday: 9 AM – 6 PM</p>
 </div>
 
 <br>
 
 <iframe class="map"
-src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
 
 </section>
 
+
 <section class="section">
+
 <h2>Order Medicine</h2>
 
 <form onsubmit="sendOrder();return false;">
+
 <input id="name" placeholder="Your Name" required style="padding:10px;width:100%;margin:5px 0">
+
 <input id="med" placeholder="Medicine Name" required style="padding:10px;width:100%;margin:5px 0">
+
 <input id="qty" placeholder="Quantity" required style="padding:10px;width:100%;margin:5px 0">
+
 <button class="btn call">Order on WhatsApp</button>
+
 </form>
 
 </section>
 
+
 <footer class="footer">
+
 <h3>Gaya Generic Aushadhi Kendra</h3>
+
 <p>Your trusted pharmacy in Gaya.</p>
+
 <p>📞 074886 25073</p>
+
 <p>📍 Katari Hill Rd, Ashok Nagar, Gaya</p>
+
 </footer>
 
+
 <a href="https://wa.me/917488625073" class="float-whatsapp">💬</a>
+
 <a href="tel:7488625073" class="float-call">📞</a>
 
-<div class="chat-toggle" onclick="toggleChat()">💊</div>
-
-<div class="chatbot" id="chatbot">
-<div class="chatbot-header">Medicine Assistant</div>
-<div class="chatbot-body" id="chatbody">Hello! Ask about medicines.</div>
-<div class="chatbot-input">
-<input id="chatinput">
-<button onclick="sendChat()">Send</button>
-</div>
-</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
 
 <script>
+
+AOS.init({
+duration:1000,
+once:true
+})
+
 function toggleMenu(){
 document.getElementById("drawer").classList.toggle("active")
 }
 
+document.addEventListener("click",function(e){
+
+let drawer=document.getElementById("drawer")
+let button=document.querySelector(".menu-btn")
+
+if(!drawer.contains(e.target) && !button.contains(e.target)){
+drawer.classList.remove("active")
+}
+
+})
+
 function sendOrder(){
+
 let n=document.getElementById("name").value
 let m=document.getElementById("med").value
 let q=document.getElementById("qty").value
+
 let msg=`Hello, my name is ${n}. I want ${q} of ${m}.`
+
 window.open(`https://wa.me/917488625073?text=${encodeURIComponent(msg)}`)
+
 }
 
-function toggleChat(){
-let c=document.getElementById("chatbot")
-c.style.display=c.style.display==="flex"?"none":"flex"
-}
-
-function sendChat(){
-let input=document.getElementById("chatinput").value
-let body=document.getElementById("chatbody")
-body.innerHTML+="<br><b>You:</b> "+input
-body.innerHTML+="<br><b>Bot:</b> Please consult our pharmacist or WhatsApp us for medicine availability."
-}
 </script>
 
 </body>
