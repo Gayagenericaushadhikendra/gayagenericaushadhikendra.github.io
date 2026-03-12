@@ -1,314 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gaya Generic Aushadhi Kendra</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gaya Generic Aushadhi Kendra | Affordable Medicines</title>
-
-<meta name="description" content="Best generic medicine store in Gaya Bihar. Affordable medicines near Katari Hill Road. Call or WhatsApp to order medicines.">
-<meta name="keywords" content="generic medicine gaya, pharmacy gaya bihar, cheap medicines gaya">
-<meta name="author" content="Gaya Generic Aushadhi Kendra">
-
+<meta name="description" content="Affordable generic medicines in Gaya, Bihar. Trusted local pharmacy near Sechai Vibhag Gate.">
 <link rel="icon" href="favicon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-
-html{scroll-behavior:smooth;}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#e8f8f0,#f5f7fb);
-color:#111;
-}
-
-/* HEADER */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:linear-gradient(135deg,#e7f7ee,#f5f7fb);color:#1f2937}
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 25px;
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.6);
-position:sticky;
-top:0;
-z-index:1000;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 20px;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,.08);
+position:sticky;top:0;z-index:1000
 }
 
-.logo{
-font-weight:700;
-font-size:18px;
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo img{width:36px;height:36px;border-radius:10px}
+
+.menu-btn{font-size:24px;cursor:pointer}
+
+.drawer{
+position:fixed;top:0;right:-260px;width:260px;height:100%;
+background:#fff;padding:40px 25px;transition:.3s;box-shadow:-3px 0 20px rgba(0,0,0,.1)
 }
+.drawer.active{right:0}
+.drawer a{display:block;margin-bottom:18px;text-decoration:none;color:#111;font-weight:500}
 
-/* HERO */
-
-.hero{
-padding:80px 25px;
-text-align:center;
+.hero{padding:70px 25px}
+.badge{
+background:#e6f7ee;color:#16a34a;padding:8px 18px;border-radius:20px;
+display:inline-block;margin-bottom:20px;font-size:14px
 }
+.hero h1{font-size:36px;line-height:1.2;margin-bottom:15px}
+.hero span{color:#16a34a}
+.hero p{color:#555;margin-bottom:25px;max-width:420px}
 
-.hero h1{
-font-size:36px;
-margin-bottom:15px;
+.btn{
+display:block;text-align:center;padding:14px;border-radius:12px;
+margin-bottom:15px;font-weight:600;text-decoration:none
 }
+.btn.call{background:#16a34a;color:#fff}
+.btn.dir{border:2px solid #16a34a;color:#16a34a}
 
-.hero span{
-color:#16a34a;
-}
+.features{margin-top:20px}
+.features li{list-style:none;margin:10px 0;color:#374151}
 
-.hero p{
-max-width:500px;
-margin:auto;
-color:#555;
-}
+.section{padding:70px 25px}
+.section h2{text-align:center;margin-bottom:30px}
 
-/* SEARCH BAR */
-
-.search-box{
-margin-top:30px;
-display:flex;
-justify-content:center;
-}
-
-.search-box input{
-width:300px;
-padding:12px;
-border-radius:30px;
-border:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* GLASS CARDS */
-
-.section{
-padding:70px 25px;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.cards{
-display:grid;
-gap:25px;
-}
-
+.cards{display:grid;gap:20px}
 .card{
-padding:25px;
-border-radius:15px;
-background:rgba(255,255,255,0.6);
-backdrop-filter:blur(12px);
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
+background:#fff;border-radius:16px;padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08)
 }
 
-/* REVIEWS */
+.stat{background:#16a34a;color:#fff;padding:20px;border-radius:12px;text-align:center}
 
-.reviews{
-display:grid;
-gap:20px;
+.map{width:100%;height:300px;border-radius:12px;border:0}
+
+.footer{
+background:linear-gradient(135deg,#0f172a,#065f46);
+color:#fff;padding:40px 25px;margin-top:40px
 }
 
-.review{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+.footer h3{margin-bottom:10px}
+
+.float-whatsapp{
+position:fixed;bottom:90px;right:20px;background:#25D366;
+width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
+justify-content:center;color:#fff;font-size:26px;text-decoration:none
 }
 
-/* MAP */
-
-.map{
-width:100%;
-height:300px;
-border:0;
-border-radius:12px;
+.float-call{
+position:fixed;bottom:20px;right:20px;background:#16a34a;
+width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
+justify-content:center;color:#fff;font-size:26px;text-decoration:none
 }
 
-/* BUTTONS */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:90px;
-background:#25D366;
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-color:white;
-text-decoration:none;
+.chatbot{
+position:fixed;bottom:20px;left:20px;background:#fff;
+width:300px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.2);
+display:none;flex-direction:column
 }
+.chatbot-header{background:#16a34a;color:#fff;padding:10px;border-radius:12px 12px 0 0}
+.chatbot-body{padding:10px;height:200px;overflow:auto;font-size:14px}
+.chatbot-input{display:flex}
+.chatbot-input input{flex:1;padding:8px;border:none;border-top:1px solid #ddd}
+.chatbot-input button{background:#16a34a;color:#fff;border:none;padding:8px}
 
-.call-btn{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:#16a34a;
-color:white;
-text-align:center;
-padding:16px;
-font-size:18px;
-font-weight:600;
-text-decoration:none;
+.chat-toggle{
+position:fixed;bottom:90px;left:20px;background:#16a34a;
+width:55px;height:55px;border-radius:50%;display:flex;align-items:center;
+justify-content:center;color:#fff;font-size:24px;cursor:pointer
 }
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:25px;
-background:#111;
-color:white;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">
-Gaya Generic Aushadhi Kendra
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
+<div>
+<div>Gaya Generic</div>
+<small style="color:#16a34a">Aushadhi Kendra</small>
 </div>
-
+</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<!-- HERO -->
+<div class="drawer" id="drawer">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+<a href="tel:7488625073">Call Now</a>
+<a href="https://wa.me/917488625073">WhatsApp</a>
+</div>
 
-<section class="hero">
+<section class="hero" id="home">
 
-<h1 data-aos="fade-up">
-Affordable Generic <span>Medicines</span>
-</h1>
+<div class="badge">Trusted Since Years in Gaya</div>
 
-<p data-aos="fade-up">
-Best generic medicine shop near Katari Hill Road, Gaya Bihar.
+<h1>Affordable Generic <span>Medicines</span> for Everyone</h1>
+
+<p>Quality medicines at lower prices – trusted by families in Gaya</p>
+
+<a href="tel:7488625073" class="btn call">Call Now</a>
+
+<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya" class="btn dir">
+Get Directions
+</a>
+
+<ul class="features">
+<li>✔ 100% Genuine</li>
+<li>✔ Up to 80% Off</li>
+<li>✔ Licensed Pharmacy</li>
+</ul>
+
+</section>
+
+<section class="section" id="about">
+<h2>About Gaya Generic Aushadhi Kendra</h2>
+
+<div class="card">
+<p>
+Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
+We provide high-quality medicines at affordable prices so every family can access
+proper healthcare without financial burden.
 </p>
+</div>
 
-<div class="search-box" data-aos="fade-up">
+<div class="cards" style="margin-top:20px">
+<div class="stat">10+<br>Years Experience</div>
+<div class="stat">5000+<br>Happy Families</div>
+<div class="stat">100%<br>Quality Assured</div>
+</div>
+</section>
 
-<input type="text" placeholder="Search medicine...">
+<section class="section" id="services">
+<h2>Healthcare Solutions for Everyone</h2>
 
+<div class="cards">
+
+<div class="card"><h3>Generic Medicines</h3>
+<p>Wide range of affordable generic medicines with same quality.</p></div>
+
+<div class="card"><h3>Affordable Pricing</h3>
+<p>Save up to 80% on medicine costs.</p></div>
+
+<div class="card"><h3>Prescription Support</h3>
+<p>Guidance in understanding prescriptions.</p></div>
+
+<div class="card"><h3>OTC Medicines</h3>
+<p>Complete range for common health needs.</p></div>
+
+<div class="card"><h3>Health & Wellness</h3>
+<p>Vitamins and supplements.</p></div>
+
+<div class="card"><h3>Friendly Guidance</h3>
+<p>Professional pharmacists ready to help.</p></div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Visit or Contact Us Today</h2>
+
+<div class="card">
+<h3>Call Us</h3>
+<p>074886 25073</p>
+<a href="tel:7488625073">Call Now</a>
+</div>
+
+<div class="card">
+<h3>Visit Us</h3>
+<p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001</p>
+<a href="https://maps.google.com/?q=Katari Hill Rd, Ashok Nagar, Gaya">Get Directions</a>
+</div>
+
+<div class="card">
+<h3>Business Hours</h3>
+<p>Mon-Sat: 8 AM – 9 PM<br>Sunday: 9 AM – 6 PM</p>
 </div>
 
 <br>
 
-<a href="https://wa.me/917488625073?text=Hello%20I%20want%20to%20order%20medicine"
-style="background:#16a34a;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;">
-
-Order Medicine on WhatsApp
-
-</a>
+<iframe class="map"
+src="https://maps.google.com/maps?q=Katari Hill Rd Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </section>
-
-<!-- SERVICES -->
 
 <section class="section">
+<h2>Order Medicine</h2>
 
-<h2 data-aos="fade-up">Our Services</h2>
-
-<div class="cards">
-
-<div class="card" data-aos="zoom-in">
-<h3>Low Cost Medicines</h3>
-<p>Affordable government approved medicines.</p>
-</div>
-
-<div class="card" data-aos="zoom-in">
-<h3>Quality Assurance</h3>
-<p>Trusted pharmaceutical products.</p>
-</div>
-
-<div class="card" data-aos="zoom-in">
-<h3>Quick WhatsApp Orders</h3>
-<p>Order medicines directly on WhatsApp.</p>
-</div>
-
-</div>
+<form onsubmit="sendOrder();return false;">
+<input id="name" placeholder="Your Name" required style="padding:10px;width:100%;margin:5px 0">
+<input id="med" placeholder="Medicine Name" required style="padding:10px;width:100%;margin:5px 0">
+<input id="qty" placeholder="Quantity" required style="padding:10px;width:100%;margin:5px 0">
+<button class="btn call">Order on WhatsApp</button>
+</form>
 
 </section>
 
-<!-- GOOGLE REVIEWS -->
-
-<section class="section">
-
-<h2 data-aos="fade-up">Customer Reviews</h2>
-
-<div class="reviews">
-
-<div class="review" data-aos="fade-right">
-⭐⭐⭐⭐⭐  
-Best generic medicine shop in Gaya. Affordable prices.
-</div>
-
-<div class="review" data-aos="fade-right">
-⭐⭐⭐⭐⭐  
-Very helpful staff and genuine medicines.
-</div>
-
-<div class="review" data-aos="fade-right">
-⭐⭐⭐⭐⭐  
-Great pharmacy near Katari Hill Road.
-</div>
-
-</div>
-
-</section>
-
-<!-- LOCATION -->
-
-<section class="section">
-
-<h2 data-aos="fade-up">Our Location</h2>
-
-<p style="text-align:center;margin-bottom:20px;">
-Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001
-</p>
-
-<iframe
-class="map"
-src="https://maps.google.com/maps?q=Katari%20Hill%20Road%20Gaya&t=&z=15&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
-</section>
-
-<footer>
-
-© 2026 Gaya Generic Aushadhi Kendra
-
+<footer class="footer">
+<h3>Gaya Generic Aushadhi Kendra</h3>
+<p>Your trusted pharmacy in Gaya.</p>
+<p>📞 074886 25073</p>
+<p>📍 Katari Hill Rd, Ashok Nagar, Gaya</p>
 </footer>
 
-<a href="https://wa.me/917488625073" class="whatsapp">
-💬
-</a>
+<a href="https://wa.me/917488625073" class="float-whatsapp">💬</a>
+<a href="tel:7488625073" class="float-call">📞</a>
 
-<a href="tel:7488625073" class="call-btn">
-📞 Call Now
-</a>
+<div class="chat-toggle" onclick="toggleChat()">💊</div>
+
+<div class="chatbot" id="chatbot">
+<div class="chatbot-header">Medicine Assistant</div>
+<div class="chatbot-body" id="chatbody">Hello! Ask about medicines.</div>
+<div class="chatbot-input">
+<input id="chatinput">
+<button onclick="sendChat()">Send</button>
+</div>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 <script>
-AOS.init();
+function toggleMenu(){
+document.getElementById("drawer").classList.toggle("active")
+}
+
+function sendOrder(){
+let n=document.getElementById("name").value
+let m=document.getElementById("med").value
+let q=document.getElementById("qty").value
+let msg=`Hello, my name is ${n}. I want ${q} of ${m}.`
+window.open(`https://wa.me/917488625073?text=${encodeURIComponent(msg)}`)
+}
+
+function toggleChat(){
+let c=document.getElementById("chatbot")
+c.style.display=c.style.display==="flex"?"none":"flex"
+}
+
+function sendChat(){
+let input=document.getElementById("chatinput").value
+let body=document.getElementById("chatbody")
+body.innerHTML+="<br><b>You:</b> "+input
+body.innerHTML+="<br><b>Bot:</b> Please consult our pharmacist or WhatsApp us for medicine availability."
+}
 </script>
 
 </body>
