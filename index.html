@@ -152,10 +152,27 @@ flex-wrap:wrap;
 }
 
 .feature{
-background:white;
-padding:15px 20px;
+display:flex;
+align-items:center;
+gap:10px;
+background:#ffffff;
+padding:12px 18px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+font-size:14px;
+font-weight:500;
+color:#1f2937;
+}
+
+.feature .icon{
+background:#e6f6ef;
+color:#17a45b;
+width:28px;
+height:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:8px;
 font-size:14px;
 }
 
@@ -374,9 +391,22 @@ Gaya Generic <br>
 </div>
 
 <div class="features">
-<div class="feature">✔ 100% Genuine</div>
-<div class="feature">💰 Up to 80% Off</div>
-<div class="feature">🏥 Licensed Pharmacy</div>
+
+<div class="feature">
+<span class="icon">✔</span>
+<span>100% Genuine</span>
+</div>
+
+<div class="feature">
+<span class="icon">💰</span>
+<span>Up to 80% Off</span>
+</div>
+
+<div class="feature">
+<span class="icon">🏥</span>
+<span>Licensed Pharmacy</span>
+</div>
+
 </div>
 
 </div>
@@ -568,6 +598,7 @@ Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
 
 </body>
 </html>
+
 
 
 
