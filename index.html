@@ -350,17 +350,19 @@ color:#17a45b;
 }  
   
 /* FOOTER */  
+
+footer{
+background:linear-gradient(160deg,#0d2233,#0a3d2f,#0f4d3c);
+color:white;
+padding:70px 0 40px;
+position:relative;
+}
   
-footer{  
-background:linear-gradient(135deg,#0f2f2a 0%,#0b4a3c 100%);  
-color:white;  
-padding:50px 0;  
-}  
-  
-.footer-grid{  
-display:grid;  
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));  
-gap:30px;  
+.footer-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+margin-top:30px;
 }  
   
 .footer-grid ul{  
@@ -372,14 +374,89 @@ margin-top:10px;
 margin-bottom:8px;  
 color:#ccc;  
 }  
-  
+
+@media(max-width:768px){
+.footer-grid{
+grid-template-columns:1fr;
+}
+}
+
 .copy{  
 text-align:center;  
 margin-top:30px;  
 color:#aaa;  
 font-size:14px;  
 }  
-  
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:15px;
+}
+
+.footer-icon{
+background:#1dbf73;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+font-size:20px;
+}
+
+.footer-desc{
+color:#b8c5c3;
+font-size:14px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.footer-contact p{
+color:#cbd5d1;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.footer-grid h3{
+margin-bottom:10px;
+}
+
+.footer-grid li{
+margin-bottom:8px;
+color:#cbd5d1;
+}
+
+.footer-grid li:hover{
+color:white;
+cursor:pointer;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+color:#aab7b3;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
+}
+
+.footer-links{
+display:block;
+margin-top:8px;
+font-size:13px;
+}
+
+footer a{
+color:#cbd5d1;
+text-decoration:none;
+}
+
+footer a:hover{
+color:white;
+}
+
 /* WHATSAPP FLOAT */  
   
 .whatsapp{  
@@ -395,6 +472,32 @@ text-decoration:none;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);  
 }  
 
+.floating-buttons{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:999;
+}
+
+.float-btn{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp{
+background:#25D366;
+}
 /* CONTACT DESIGN */
 .contact-link{
 display:inline-block;
@@ -775,10 +878,35 @@ loading="lazy">
 <br>  
 <a href="tel:07488625073" class="btn">Call Now</a> </div>
   
-</section>  <footer>  <div class="container footer-grid">  <div>  
-<h3>Gaya Generic Aushadhi Kendra</h3>  
-<p>Your trusted pharmacy in Gaya.</p>  
-</div>  <div>  
+</section>  <footer>  <div class="container footer-grid">
+
+<div class="footer-info">
+
+<div class="footer-logo">
+<div class="footer-icon">👥</div>
+<div>
+<strong>Gaya Generic</strong><br>
+<span>Aushadhi Kendra</span>
+</div>
+</div>
+
+<p class="footer-desc">
+Your trusted pharmacy in Gaya, providing affordable generic medicines for better health and wellbeing.
+</p>
+
+<div class="footer-contact">
+
+<p>📞 074886 25073</p>
+
+<p>📍 Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001</p>
+
+<p>⏰ Mon-Sat: 10 AM – 9 PM<br>Sunday: 10 AM – 9 PM</p>
+
+</div>
+
+</div>
+
+<div>  
 <h3>Quick Links</h3>  
 <ul>  
 <li>Home</li>  
@@ -794,9 +922,17 @@ loading="lazy">
 <li>OTC Medicines</li>  
 <li>Health & Wellness</li>  
 </ul>  
-</div>  </div>  <div class="copy">  
-© 2026 Gaya Generic Aushadhi Kendra  
-</div>  </footer>  <a class="whatsapp" href="https://wa.me/917488625073">💬</a>
+</div>  </div>
+
+<div class="copy">
+© 2026 Gaya Generic Aushadhi Kendra. All rights reserved.
+<br>
+<span class="footer-links">
+Privacy Policy | Terms of Service
+</span>
+</div>
+
+</footer>  <a class="whatsapp" href="https://wa.me/917488625073">💬</a>
 
 </body>  
 </html>
