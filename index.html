@@ -1,328 +1,938 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaya Generic Aushadhi Kendra</title>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Gaya Generic Aushadhi Kendra</title>  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+font-family:'Poppins',sans-serif;  
+}  
+  
+body{  
+background:#f7fbf9;  
+color:#111;  
+}  
+  
+.container{  
+width:90%;  
+max-width:1100px;  
+margin:auto;  
+}  
+  
+/* NAVBAR */  
+  
+header{  
+background:#ffffff;  
+box-shadow:0 2px 10px rgba(0,0,0,0.05);  
+padding:15px 0;  
+position:sticky;  
+top:0;  
+z-index:100;  
+}  
+  
+.nav{  
+display:flex;  
+align-items:center;  
+justify-content:space-between;  
+}  
+  
+.logo{  
+display:flex;  
+align-items:center;  
+gap:10px;  
+font-weight:600;  
+font-size:18px;  
+}  
+  
+.logo-icon{  
+background:#17a45b;  
+color:white;  
+padding:10px;  
+border-radius:12px;  
+}  
+  
+/* HERO */  
+  
+.hero{  
+background:linear-gradient(135deg,#ecfaf3 0%,#dff5ea 40%,#c9efdd 100%);  
+padding:80px 0;  
+}  
+  
+.tag{  
+display:inline-block;  
+background:#e6f6ef;
+color:#1f7a5c;  
+padding:8px 18px;  
+border-radius:50px;  
+font-size:14px;  
+font-weight:500;  
+margin-bottom:15px;  
+box-shadow:0 4px 10px rgba(0,0,0,0.05);  
+  }  
+  
+/* TRUSTED BADGE */  
+  
+.badge-trusted{  
+display:inline-flex;  
+align-items:center;  
+gap:10px;  
+background:#ffffff;  
+color:#1f7a5c;  
+padding:8px 18px;  
+border-radius:50px;  
+font-size:14px;  
+font-weight:500;  
+margin-bottom:15px;  
+box-shadow:0 4px 10px rgba(0,0,0,0.05);  
+}  
+  
+.badge-trusted .dot{  
+width:8px;  
+height:8px;  
+background:#22c55e;  
+border-radius:50%;  
+display:inline-block;  
+}  
+    
+.hero h1{  
+font-size:40px;  
+font-weight:700;  
+line-height:1.2;  
+}  
+  
+.hero h1 span{  
+color:#17a45b;  
+}  
+  
+.hero p{  
+margin-top:15px;  
+color:#555;  
+font-size:16px;  
+}  
+  
+.buttons{  
+margin-top:25px;  
+display:flex;  
+gap:15px;  
+flex-wrap:wrap;  
+}  
+  
+.btn{  
+padding:14px 25px;  
+border-radius:10px;  
+font-weight:500;  
+text-decoration:none;  
+}  
+  
+.btn-call{  
+background:#17a45b;  
+color:white;  
+}  
+  
+.btn-outline{  
+border:2px solid #17a45b;  
+color:#17a45b;  
+}  
+  
+/* FEATURES */  
+  
+.features{  
+display:flex;  
+flex-direction:column;  
+gap:14px;  
+margin-top:25px;  
+}  
+  
+.feature{  
+display:flex;  
+align-items:center;  
+gap:12px;  
+font-size:14px;  
+font-weight:500;  
+color:#374151;  
+}  
+  
+.feature-icon{  
+width:34px;  
+height:34px;  
+background:#e8f6ef;  
+border-radius:50%;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+font-size:16px;  
+color:#17a45b;  
+box-shadow:0 3px 8px rgba(0,0,0,0.05);  
+}  
+  
+/* ABOUT */  
+  
+.about{  
+padding:80px 0;  
+text-align:center;  
+background:#ffffff;  
+}  
+  
+.about-card{  
+background:white;  
+padding:40px;  
+border-radius:20px;  
+box-shadow:0 10px 30px rgba(0,0,0,0.07);  
+margin-top:30px;  
+}  
+  
+/* STATS */  
+  
+.stats{  
+display:flex;  
+flex-direction:column;  
+align-items:center;  
+gap:35px;  
+margin-top:40px;  
+}  
+  
+.stat{  
+text-align:center;  
+}  
+  
+.stat-box{  
+background:#17a45b;  
+color:white;  
+width:90px;  
+height:90px;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+font-size:26px;  
+font-weight:600;  
+border-radius:20px;  
+margin:auto;  
+box-shadow:0 8px 20px rgba(0,0,0,0.1);  
+}  
+  
+.stat p{  
+margin-top:10px;  
+color:#555;  
+font-weight:500;  
+}  
+  
+/* SERVICES */  
+  
+.services{  
+padding:80px 0;  
+background:linear-gradient(180deg,#f3fbf7 0%,#e8f6ef 100%);  
+text-align:center;  
+}  
+  
+.service-grid{  
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  
+gap:25px;  
+margin-top:40px;  
+}  
+  
+.service{  
+background:white;  
+padding:25px;  
+border-radius:18px;  
+box-shadow:0 10px 25px rgba(0,0,0,0.06);  
+text-align:left;  
+}  
+  
+.service-desc{  
+margin-top:15px;  
+color:#6b7280;  
+max-width:500px;  
+margin-left:auto;  
+margin-right:auto;  
+font-size:15px;  
+  }  
+  
+.service-icon{  
+width:55px;  
+height:55px;  
+background:#17a45b;  
+color:white;  
+border-radius:12px;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+font-size:22px;  
+margin-bottom:15px;  
+box-shadow:0 8px 15px rgba(0,0,0,0.15);  
+}  
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+.service-icon svg{
+width:24px;
+height:24px;
+stroke:white;
+  }
+  
+/* WHY */  
+  
+.why{  
+padding:80px 0;  
+text-align:center;  
+background:linear-gradient(180deg,#f8fdfb 0%,#eaf7f0 100%);  
+}  
+  
+.why-grid{  
+margin-top:40px;  
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  
+gap:25px;  
+}  
+  
+.why-card{  
+background:white;  
+padding:30px;  
+border-radius:18px;  
+box-shadow:0 10px 25px rgba(0,0,0,0.06);  
+text-align:left;  
+}  
+  
+/* CONTACT */  
+  
+.contact{
+padding:80px 0;
+background:linear-gradient(180deg,#eef9f4 0%,#dff3ea 100%);
+text-align:center;
 }
+  
+.contact-grid{  
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  
+gap:25px;  
+margin-top:40px;  
+}  
+  
+.contact-card{  
+background:white;  
+padding:25px;  
+border-radius:18px;  
+box-shadow:0 10px 25px rgba(0,0,0,0.06);  
+text-align:left;  
+}  
 
-body{
-background:#f7fbf9;
-color:#111;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
-}
-
-/* NAVBAR */
-
-header{
-background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-padding:15px 0;
-position:sticky;
-top:0;
-z-index:100;
-transition:all .3s ease;
-}
-
-header.scrolled{
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
-padding:10px 0;
-}
-
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:600;
-font-size:18px;
-}
-
-.logo-icon{
+.contact-icon{
+width:50px;
+height:50px;
 background:#17a45b;
-color:white;
-padding:10px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:12px;
+margin-bottom:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* HAMBURGER */
+.contact-icon svg{
+width:24px;
+height:24px;
+stroke:white;
+}
 
-.menu-btn{
-display:none;
-font-size:26px;
+/* CTA */  
+  
+.cta{  
+background:linear-gradient(135deg,#1dbf73 0%,#13a55a 100%);  
+color:white;  
+padding:80px 0;  
+text-align:center;  
+}  
+  
+.cta .btn{  
+background:white;  
+color:#17a45b;  
+}  
+  
+/* FOOTER */  
+
+footer{
+background:linear-gradient(160deg,#0d2233,#0a3d2f,#0f4d3c);
+color:white;
+padding:70px 0 40px;
+position:relative;
+}
+  
+.footer-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+margin-top:30px;
+}  
+  
+.footer-grid ul{  
+list-style:none;  
+margin-top:10px;  
+}  
+  
+.footer-grid li{  
+margin-bottom:8px;  
+color:#ccc;  
+}  
+
+@media(max-width:768px){
+.footer-grid{
+grid-template-columns:1fr;
+}
+}
+
+.copy{  
+text-align:center;  
+margin-top:30px;  
+color:#aaa;  
+font-size:14px;  
+}  
+
+.footer-logo{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:15px;
+}
+
+.footer-icon{
+background:#1dbf73;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+font-size:20px;
+}
+
+.footer-desc{
+color:#b8c5c3;
+font-size:14px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.footer-contact p{
+color:#cbd5d1;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.footer-grid h3{
+margin-bottom:10px;
+}
+
+.footer-grid li{
+margin-bottom:8px;
+color:#cbd5d1;
+}
+
+.footer-grid li:hover{
+color:white;
 cursor:pointer;
 }
 
-.nav-menu{
-display:flex;
-gap:25px;
+.copy{
+text-align:center;
+margin-top:40px;
+color:#aab7b3;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
 }
 
-.nav-menu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-@media(max-width:768px){
-
-.menu-btn{
+.footer-links{
 display:block;
+margin-top:8px;
+font-size:13px;
 }
 
-.nav-menu{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-align-items:center;
-gap:20px;
-padding:25px 0;
-display:none;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.nav-menu.active{
-display:flex;
-}
-
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(135deg,#ecfaf3 0%,#dff5ea 40%,#c9efdd 100%);
-padding:80px 0;
-animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.tag{
-display:inline-block;
-background:#e6f6ef;
-color:#1f7a5c;
-padding:8px 18px;
-border-radius:50px;
-font-size:14px;
-font-weight:500;
-margin-bottom:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* TRUSTED BADGE */
-
-.badge-trusted{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#ffffff;
-color:#1f7a5c;
-padding:8px 18px;
-border-radius:50px;
-font-size:14px;
-font-weight:500;
-margin-bottom:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-.badge-trusted .dot{
-width:8px;
-height:8px;
-background:#22c55e;
-border-radius:50%;
-display:inline-block;
-}
-
-.hero h1{
-font-size:40px;
-font-weight:700;
-line-height:1.2;
-}
-
-.hero h1 span{
-color:#17a45b;
-}
-
-.hero p{
-margin-top:15px;
-color:#555;
-font-size:16px;
-}
-
-.buttons{
-margin-top:25px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:14px 25px;
-border-radius:10px;
-font-weight:500;
+footer a{
+color:#cbd5d1;
 text-decoration:none;
 }
 
-.btn-call{
-background:#17a45b;
+footer a:hover{
 color:white;
 }
 
-.btn-outline{
-border:2px solid #17a45b;
+/* WHATSAPP FLOAT */  
+  
+.whatsapp{  
+position:fixed;  
+bottom:20px;  
+right:20px;  
+background:#17a45b;  
+color:white;  
+padding:15px 18px;  
+border-radius:50%;  
+font-size:20px;  
+text-decoration:none;  
+box-shadow:0 5px 15px rgba(0,0,0,0.3);  
+}  
+
+.floating-buttons{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:999;
+}
+
+.float-btn{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp{
+background:#25D366;
+}
+/* CONTACT DESIGN */
+.contact-link{
+display:inline-block;
+margin-top:10px;
 color:#17a45b;
+font-weight:600;
+text-decoration:none;
 }
 
-/* SCROLL ANIMATION */
-
-section{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s ease;
+.contact-link:hover{
+text-decoration:underline;
 }
 
-section.show{
-opacity:1;
-transform:translateY(0);
+/* MAP DESIGN */
+
+.map-section{
+margin-top:40px;
+position:relative;
 }
 
-/* बाकी आपका original CSS untouched है */
+.map-box{
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
 
-</style>
-</head>
+.map-box iframe{
+width:100%;
+height:350px;
+border:0;
+}
 
-<body>
+.open-map{
+position:absolute;
+top:10px;
+left:10px;
+background:white;
+padding:6px 12px;
+font-size:13px;
+border-radius:6px;
+text-decoration:none;
+color:#1a73e8;
+font-weight:500;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
 
-<header id="header">
+</style>  </head>  <body>  <header>  
+<div class="container nav">  
+<div class="logo">  
+<div class="logo-icon">👥</div>  
+<div>  
+Gaya Generic <br>  
+<small>Aushadhi Kendra</small>  
+</div>  
+</div>  
+</div>  
+</header>  <section class="hero">  
+<div class="container">  <div class="badge-trusted">  
+  <span class="dot"></span>  
+  Trusted Since Years in Gaya  
+</div>  <h1>Affordable Generic <span>Medicines</span> for Everyone</h1>  <p>Quality medicines at Lower Prices – Trusted by Families in Gaya.</p>  <div class="buttons">  
+<a href="tel:07488625073" class="btn btn-call">Call Now</a>  
+<a href="https://maps.google.com" class="btn btn-outline">Get Directions</a>  
+</div>  <div class="features">  <div class="features">  <div class="feature">  
+<div class="feature-icon">✔</div>  
+<span>100% Genuine</span>  
+</div>  <div class="feature">  
+<div class="feature-icon">💰</div>  
+<span>Up to 80% Off</span>  
+</div>  <div class="feature">  
+<div class="feature-icon">🏥</div>  
+<span>Licensed Pharmacy</span>  
+</div>  </div>  </div>  </div>  
+</section>  <section class="about">  
+<div class="container">  <div class="tag">About Us</div>  <h2>About Gaya Generic Aushadhi Kendra</h2>  <div class="about-card">  <p>  
+Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar. We provide high-quality medicines at affordable prices so every family can access proper healthcare without financial burden.  
+</p>  <div class="stats">  <div class="stat">  
+<div class="stat-box">10+</div>  
+<p>Years Experience</p>  
+</div>  <div class="stat">  
+<div class="stat-box">5000+</div>  
+<p>Happy Families</p>  
+</div>  <div class="stat">  
+<div class="stat-box">100%</div>  
+<p>Quality Assured</p>  
+</div>  </div>  </div>  
+</div>  
+</section>  <section class="services">  
+<div class="container">  <div class="tag">Our Services</div>  <h2>Healthcare Solutions for Everyone</h2>  <p class="service-desc">  
+Comprehensive pharmaceutical services to keep you and your family healthy  
+  </p>    
+<div class="service-grid">
 
-<div class="container nav">
-
-<div class="logo">
-<div class="logo-icon">👥</div>
-<div>
-Gaya Generic <br>
-<small>Aushadhi Kendra</small>
+<div class="service">
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<path d="M10 14L14 10"/>
+<path d="M7 17a4 4 0 0 1 0-6l4-4a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0z"/>
+</svg>
 </div>
+<h3>Generic Medicines</h3>
+<p>Wide range of affordable generic medicines with same quality as branded alternatives</p>
 </div>
 
-<div class="menu-btn" id="menuBtn">☰</div>
-
-<div class="nav-menu" id="navMenu">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+<div class="service">
+<div class="service-icon">$</div>
+<h3>Affordable Pricing</h3>
+<p>Save up to 80% on your medicine costs without compromising quality</p>
 </div>
 
+<div class="service">
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+<path d="M14 2v6h6"/>
+</svg>
+</div>
+<h3>Prescription Support</h3>
+<p>Expert guidance in understanding and fulfilling your prescriptions</p>
 </div>
 
-</header>
+<div class="service">
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<path d="M6 7l1-3h10l1 3"/>
+<path d="M3 7h18l-1 14H4L3 7z"/>
+</svg>
+</div>
+<h3>Over-the-Counter</h3>
+<p>Complete range of OTC medicines for common health needs</p>
+</div>
 
-<section class="hero">
+<div class="service">
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+</svg>
+</div>
+<h3>Health & Wellness</h3>
+<p>Vitamins, supplements and wellness products for better health</p>
+</div>
+
+<div class="service">
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<circle cx="12" cy="7" r="4"/>
+<path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
+</svg>
+</div>
+<h3>Friendly Guidance</h3>
+<p>Professional pharmacists ready to help with your healthcare needs</p>
+</div>
+
+  </div>
+</div>  
+</section>  
+<section class="why">  
+<div class="container">  
+
+<div class="tag">Why Choose Us</div>
+
+<h2>Why Families Trust Us</h2>
+<div class="why-grid">  
+<div class="why-card">
+
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<circle cx="12" cy="8" r="4"/>
+<path d="M8 14l-2 7 6-3 6 3-2-7"/>
+
+</svg>
+</div>
+
+<h3>Low-cost Genuine Medicines</h3>  
+<p>Save up to 80% without compromising on quality or authenticity.</p>  
+</div>  
+<div class="why-card">  
+
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="22"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+
+</svg>
+</div>
+<h3>Trusted Local Pharmacy</h3>  
+<p>Years of trusted service to families across Gaya, Bihar.</p>  
+</div>  
+<div class="why-card">
+
+<div class="service-icon">
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10z"/>
+<circle cx="12" cy="11" r="2"/>
+
+</svg>
+</div>
+
+<h3>Easy to Locate</h3>  
+<p>Conveniently located near Sechai Vibhag Gate, Ashok Nagar.</p>  
+</div>  
+<div class="why-card">
+
+<div class="service-icon">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11a2 2 0 0 0 2-2l1-7a2 2 0 0 0-2-2h-5z"/>
+<path d="M7 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h3"/>
+
+</svg>
+
+</div>
+
+<h3>Customer-First Approach</h3>  
+<p>Your health and satisfaction are our top priorities.</p>  
+</div>  </div>  
+</div>  
+</section>
+  
+<section class="contact">  
 <div class="container">
 
-<div class="badge-trusted">
-<span class="dot"></span>
-Trusted Since Years in Gaya
+<div class="tag">Location & Contact</div>
+
+<h2>Visit or Contact Us Today</h2>
+
+<p class="contact-subtitle">
+We're here to help with all your healthcare needs
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="contact-icon">
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2">
+
+<path d="M22 16.9v3a2 2 0 0 1-2.2 2
+A19.8 19.8 0 0 1 3.1 5.2
+2 2 0 0 1 5.1 3h3
+a2 2 0 0 1 2 1.7
+c.1.9.4 1.8.8 2.6
+a2 2 0 0 1-.4 2.1
+L9.9 10a16 16 0 0 0 4.1 4.1
+l.6-.6a2 2 0 0 1 2.1-.4
+c.8.4 1.7.7 2.6.8
+a2 2 0 0 1 1.7 2z"/>
+
+</svg>
 </div>
 
-<h1>Affordable Generic <span>Medicines</span> for Everyone</h1>
+<h3>Call Us</h3>
+<p>74886 25073</p>
 
-<p>Quality medicines at Lower Prices – Trusted by Families in Gaya.</p>
-
-<div class="buttons">
-<a href="tel:07488625073" class="btn btn-call">Call Now</a>
-<a href="https://maps.google.com" class="btn btn-outline">Get Directions</a>
-</div>
+<a href="tel:917488625073" class="contact-link">Call Now ></a>
 
 </div>
+
+<div class="contact-card">
+
+<div class="contact-icon">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2">
+
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13
+a9 9 0 1 1 18 0z"/>
+
+<circle cx="12" cy="10" r="3"/>
+
+</svg>
+
+</div>
+
+<h3>Visit Us</h3>
+<p>Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya</p>
+
+<a href="https://maps.app.goo.gl/B5Z9JHJLyNbXh4zKA" 
+class="contact-link" 
+target="_blank">
+Get Directions >
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="contact-icon">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 24 24"
+fill="none"
+stroke="white"
+stroke-width="2">
+
+<circle cx="12" cy="12" r="10"/>
+<polyline points="12 6 12 12 16 14"/>
+
+</svg>
+
+</div>
+
+<h3>Business Hours</h3>
+<p>Mon-Sat: 10:00 AM - 9:00 PM
+
+Sunday: 10:00 AM - 9:00 PM </p>
+
+</div>
+
+</div>  
+</div>  
 </section>
 
-<!-- आपका बाकी पूरा HTML वही रहेगा -->
+<div class="map-section">
 
-<footer>
+<div class="container">
+
+<a href="https://maps.app.goo.gl/B5Z9JHJLyNbXh4zKA" target="_blank" class="open-map">
+Open in Maps ↗
+</a>
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=Katari+Hill+Rd+Gaya+Bihar&output=embed"
+width="100%"
+height="350"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+<section class="cta">
+
+<div class="tag">Get In Touch</div>
+
+<h2>Need Medicines at Affordable Prices?</h2>  
+<p>Call us now or visit our store.</p>  
+<br>  
+<a href="tel:07488625073" class="btn">Call Now</a> </div>
+  
+</section>  <footer>  <div class="container footer-grid">
+
+<div class="footer-info">
+
+<div class="footer-logo">
+<div class="footer-icon">👥</div>
+<div>
+<strong>Gaya Generic</strong><br>
+<span>Aushadhi Kendra</span>
+</div>
+</div>
+
+<p class="footer-desc">
+Your trusted pharmacy in Gaya, providing affordable generic medicines for better health and wellbeing.
+</p>
+
+<div class="footer-contact">
+
+<p>📞 074886 25073</p>
+
+<p>📍 Katari Hill Rd, near Sechai Vibhag Gate, Ashok Nagar, Gaya, Bihar 823001</p>
+
+<p>⏰ Mon-Sat: 10 AM – 9 PM<br>Sunday: 10 AM – 9 PM</p>
+
+</div>
+
+</div>
+
+<div>  
+<h3>Quick Links</h3>  
+<ul>  
+<li>Home</li>  
+<li>About</li>  
+<li>Services</li>  
+<li>Contact</li>  
+</ul>  
+</div>  <div>  
+<h3>Our Services</h3>  
+<ul>  
+<li>Generic Medicines</li>  
+<li>Prescription Support</li>  
+<li>OTC Medicines</li>  
+<li>Health & Wellness</li>  
+</ul>  
+</div>  </div>
+
 <div class="copy">
 © 2026 Gaya Generic Aushadhi Kendra. All rights reserved.
+<br>
+<span class="footer-links">
+Privacy Policy | Terms of Service
+</span>
 </div>
-</footer>
 
-<a class="whatsapp" href="https://wa.me/917488625073">💬</a>
+</footer>  <a class="whatsapp" href="https://wa.me/917488625073">💬</a>
 
-<script>
-
-/* HAMBURGER */
-
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
-
-menuBtn.onclick = () => {
-navMenu.classList.toggle("active");
-};
-
-/* SCROLL NAVBAR EFFECT */
-
-window.addEventListener("scroll", function(){
-
-let header = document.getElementById("header");
-
-header.classList.toggle("scrolled", window.scrollY > 20);
-
-});
-
-/* SCROLL ANIMATION */
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(sec=>{
-
-const top = window.scrollY;
-const offset = sec.offsetTop - 400;
-const height = sec.offsetHeight;
-
-if(top >= offset && top < offset + height){
-sec.classList.add("show");
-}
-
-});
-
-});
-
-</script>
-
-</body>
+</body>  
 </html>
