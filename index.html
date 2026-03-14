@@ -544,17 +544,111 @@ font-weight:500;
 box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
-</style>  </head>  <body>  <header>  
-<div class="container nav">  
-<div class="logo">  
-<div class="logo-icon">👥</div>  
-<div>  
-Gaya Generic <br>  
-<small>Aushadhi Kendra</small>  
-</div>  
-</div>  
-</div>  
-</header>  <section class="hero">  
+/* NAV MENU */
+
+.nav-menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:#333;
+border-radius:3px;
+transition:0.3s;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-menu{
+position:absolute;
+top:70px;
+right:0;
+background:white;
+width:200px;
+flex-direction:column;
+align-items:center;
+padding:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+display:none;
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+.hamburger{
+display:flex;
+}
+
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* END */
+
+</style>  
+</head>  
+<body>  
+
+<header id="navbar">
+<div class="container nav">
+
+<div class="logo">
+<div class="logo-icon">👥</div>
+<div>
+Gaya Generic <br>
+<small>Aushadhi Kendra</small>
+</div>
+</div>
+
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<ul class="nav-menu" id="navMenu">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+</header>
+
+<section class="hero">  
 <div class="container">  <div class="badge-trusted">  
   <span class="dot"></span>  
   Trusted Since Years in Gaya  
@@ -571,7 +665,7 @@ Gaya Generic <br>
 <div class="feature-icon">🏥</div>  
 <span>Licensed Pharmacy</span>  
 </div>  </div>  </div>  </div>  
-</section>  <section class="about">  
+</section>  <section class="about reveal">  
 <div class="container">  <div class="tag">About Us</div>  <h2>About Gaya Generic Aushadhi Kendra</h2>  <div class="about-card">  <p>  
 Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar. We provide high-quality medicines at affordable prices so every family can access proper healthcare without financial burden.  
 </p>  <div class="stats">  <div class="stat">  
@@ -585,7 +679,10 @@ Gaya Generic Aushadhi Kendra is a trusted generic medicine store in Gaya, Bihar.
 <p>Quality Assured</p>  
 </div>  </div>  </div>  
 </div>  
-</section>  <section class="services">  
+</section>  
+
+<section class="services reveal">
+
 <div class="container">  <div class="tag">Our Services</div>  <h2>Healthcare Solutions for Everyone</h2>  <p class="service-desc">  
 Comprehensive pharmaceutical services to keep you and your family healthy  
   </p>    
@@ -654,7 +751,7 @@ Comprehensive pharmaceutical services to keep you and your family healthy
   </div>
 </div>  
 </section>  
-<section class="why">  
+<section class="why reveal">  
 <div class="container">  
 
 <div class="tag">Why Choose Us</div>
@@ -746,7 +843,7 @@ stroke-linejoin="round">
 </div>  
 </section>
   
-<section class="contact">  
+<section class="contact reveal">  
 <div class="container">
 
 <div class="tag">Location & Contact</div>
@@ -869,7 +966,7 @@ loading="lazy">
 
 </div>
 
-<section class="cta">
+<section class="cta reveal">
 
 <div class="tag">Get In Touch</div>
 
@@ -933,6 +1030,58 @@ Privacy Policy | Terms of Service
 </div>
 
 </footer>  <a class="whatsapp" href="https://wa.me/917488625073">💬</a>
+<script>
+
+/* HAMBURGER MENU */
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+navMenu.classList.toggle("active");
+});
+
+
+/* NAVBAR SCROLL EFFECT */
+
+window.addEventListener("scroll", function(){
+
+const navbar = document.getElementById("navbar");
+
+if(window.scrollY > 50){
+navbar.style.boxShadow="0 5px 20px rgba(0,0,0,0.1)";
+navbar.style.background="#ffffff";
+}
+else{
+navbar.style.boxShadow="none";
+}
+
+});
+
+
+/* SCROLL REVEAL ANIMATION */
+
+function reveal(){
+
+const reveals = document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let elementVisible = 100;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
 
 </body>  
 </html>
